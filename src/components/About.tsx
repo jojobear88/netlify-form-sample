@@ -11,7 +11,7 @@ export default function About() {
           <div className="flex justify-center">
             <Image
               width={584} height={800}
-              src="/avatar.jpg"
+              src="/images/avatar.jpg"
               alt="Avatar"
               className="w-64 h-80 rounded-lg shadow-lg object-cover"
             />
