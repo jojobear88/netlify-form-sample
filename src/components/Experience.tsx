@@ -3,7 +3,7 @@ export default function Experience() {
     {
       id: 1,
       company: 'Digital Ventures Corp.',
-      position: 'Lead Developer / Project Manager',
+      position: 'Lead Developer / Software Architect',
       duration: '2020 - Present',
       period: 'SaaS/eCommerce Product Leadership',
       achievements: [
