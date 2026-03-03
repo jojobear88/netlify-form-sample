@@ -34,7 +34,7 @@ export default function Contact() {
       const response = await fetch("/__forms.html", {
         method: 'POST',
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: formDataObj
+        body: new URLSearchParams(formDataObj as any).toString()
       });
 
       if (response.ok) {
@@ -64,7 +64,6 @@ export default function Contact() {
         <form
           name="contact"
           method="POST"
-          data-netlify="true"
           onSubmit={handleSubmit}
           className="bg-gray-50 p-8 rounded-lg shadow-md"
         >
