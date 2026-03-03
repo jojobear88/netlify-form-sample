@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, FormEvent, ChangeEvent } from 'react';
+import { useState, SubmitEvent, ChangeEvent } from 'react';
 
 interface FormData {
   name: string;
@@ -24,7 +24,7 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const formElement = e.currentTarget;
@@ -64,6 +64,7 @@ export default function Contact() {
         <form
           name="contact"
           method="POST"
+          data-netlify="true"
           onSubmit={handleSubmit}
           className="bg-gray-50 p-8 rounded-lg shadow-md"
         >
