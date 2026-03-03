@@ -28,13 +28,13 @@ export default function Contact() {
     e.preventDefault();
 
     const formElement = e.currentTarget;
-    const formData  = new FormData(formElement);
+    const formDataObj  = new FormData(formElement);
 
     try {
       const response = await fetch("/__forms.html", {
         method: 'POST',
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData  as any).toString()
+        body: formDataObj
       });
 
       if (response.ok) {
@@ -64,7 +64,6 @@ export default function Contact() {
         <form
           name="contact"
           method="POST"
-          data-netlify="true"
           onSubmit={handleSubmit}
           className="bg-gray-50 p-8 rounded-lg shadow-md"
         >
@@ -129,13 +128,13 @@ export default function Contact() {
         <div className="mt-12 text-center">
           <p className="text-gray-600 mb-6">Or connect with me on social media:</p>
           <div className="flex justify-center gap-6">
-            <a href="#" className="text-gray-600 hover:text-blue-600 transition">
+            <a href="https://www.linkedin.com/in/buiquangduy/" className="text-gray-600 hover:text-blue-600 transition">
               LinkedIn
             </a>
-            <a href="#" className="text-gray-600 hover:text-blue-600 transition">
+            <a href="https://github.com/jojobear88/" className="text-gray-600 hover:text-blue-600 transition">
               GitHub
             </a>
-            <a href="#" className="text-gray-600 hover:text-blue-600 transition">
+            <a href="https://x.com/jojobear8888" className="text-gray-600 hover:text-blue-600 transition">
               Twitter
             </a>
           </div>
